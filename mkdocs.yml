@@ -1,11 +1,11 @@
 site_name: test-uv
 repo_url: https://github.com/deadhand777/test-uv
 site_url: https://deadhand777.github.io/test-uv
-site_description: This is a test of a new project templete
+site_description: This is a test of a new python project templete for ai
 site_author: Chris Schulz
 edit_uri: edit/main/docs/
 repo_name: deadhand777/test-uv
-copyright: Maintained by <a href="https://deadhand777.com">Florian</a>.
+copyright: Maintained by <a href="https://deadhand777.com">deadhand777</a>.
 
 nav:
   - Home: index.md
@@ -21,13 +21,6 @@ theme:
   feature:
     tabs: true
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: white
-      accent: deep orange
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
@@ -35,6 +28,13 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
   icon:
     repo: fontawesome/brands/github
 
