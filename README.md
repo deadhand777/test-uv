@@ -65,3 +65,18 @@ To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookie
 ---
 
 Repository initiated with [fpgmaas/cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv).
+
+## UV
+
+```bash
+uv venv --python 3.11.6
+source .venv/bin/activate
+which python
+ python -V
+uv sync
+ uv pip list
+uv add <package>
+uv lock
+```
+
+## Other commands

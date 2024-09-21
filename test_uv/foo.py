@@ -1,3 +1,6 @@
+import awswrangler as wr
+
+print(f"awswrangler version: {wr.__version__}")
 print("Hello World")
 
 
