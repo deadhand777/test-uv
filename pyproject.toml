@@ -7,7 +7,7 @@ readme = "README.md"
 keywords = ['python']
 requires-python = ">=3.8,<4.0"
 dependencies = [
-    "awswrangler>=3.1.0",
+    "awswrangler>=3.9.1",
     "isort>=5.13.2",
 ]
 
