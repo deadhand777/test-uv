@@ -84,3 +84,9 @@ uv lock
 ```bash
  test-section
 ```
+
+## Documentation from MKDocs
+
+```bash
+make docs
+```
