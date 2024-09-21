@@ -85,7 +85,7 @@ uv lock
  test-section
 ```
 
-## Documentation
+## Documentation from MKDocs
 
 ```bash
 make docs
