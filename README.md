@@ -79,4 +79,8 @@ uv add <package>
 uv lock
 ```
 
-## Other commands
+## Linting & Styling
+
+```bash
+ test-section
+```
