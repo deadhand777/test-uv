@@ -72,7 +72,7 @@ uv lock
 ## Linting & Styling
 
 ```bash
- test-section
+ make test
 ```
 
 ## Update Github Action uv version
@@ -87,7 +87,7 @@ uv lock
 make docs
 ```
 
-after the changes are pushed to GitHub: create a new release
+after the changes are pushed to GitHub: create a new release or pre-release to trigger the `pages build and deployment` workflow.
 
 To finalize the set-up for publishing to PyPI, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/publishing/#set-up-for-pypi).
 For activating the automatic documentation with MkDocs, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/mkdocs/#enabling-the-documentation-on-github).
