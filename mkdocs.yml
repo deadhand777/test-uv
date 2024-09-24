@@ -5,7 +5,7 @@ site_description: This is a test of a new python project templete for ai
 site_author: Chris Schulz
 edit_uri: edit/main/docs/
 repo_name: deadhand777/test-uv
-copyright: Maintained by <a href="https://deadhand777.com">Chris</a>.
+copyright: Maintained by <a href="https://deadhand777.com">deadhand777</a>.
 
 nav:
   - Home: index.md
