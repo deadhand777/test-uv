@@ -101,7 +101,7 @@ make check
 
 ## Update Github Action uv version
 
-# see https://github.com/astral-sh/setup-uv
+- see [setup-uv](https://github.com/astral-sh/setup-uv)
 
 ```yaml
 - name: Install uv
