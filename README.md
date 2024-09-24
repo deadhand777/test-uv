@@ -56,15 +56,18 @@ git push origin main
 You are now ready to start development on your project!
 The CI/CD pipeline will be triggered when you open a pull request, merge to main, or when you create a new release.
 
-## UV
+## Set Up Your Development Environment
 
 ```bash
-uv venv --python 3.11.6
+uv venv --python <python-version> # e.g. 3.11.6
 source .venv/bin/activate
 which python
- python -V
+python -V
+```
+
+```bash
 uv sync
- uv pip list
+uv pip list
 uv add <package>
 uv lock
 ```
