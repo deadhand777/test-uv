@@ -3,6 +3,8 @@
 [![Release](https://img.shields.io/github/v/release/deadhand777/test-uv)](https://img.shields.io/github/v/release/deadhand777/test-uv)
 ![Build status](https://img.shields.io/github/actions/workflow/status/deadhand777/test-uv/main.yml?branch=main)
 
+![](./man/setup.jpeg)
+
 ### 1. Create a New Repository
 
 First, create a repository on GitHub with the same name as this project, and then run the following commands:
@@ -121,9 +123,11 @@ make docs
 
 - Settings > Code and Automation > Pages shows the documentatio URL
 
-To finalize the set-up for publishing to PyPI, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/publishing/#set-up-for-pypi).
-For activating the automatic documentation with MkDocs, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/mkdocs/#enabling-the-documentation-on-github).
-To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/codecov/).
+- further information on automatic documentation with MkDocs, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/mkdocs/#enabling-the-documentation-on-github).
+
+## Code Coverage
+
+- To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/codecov/).
 
 ## Releasing a new version
 
