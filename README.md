@@ -69,7 +69,31 @@ uv add <package>
 uv lock
 ```
 
+## Update project.toml
+
+[tool.ruff]
+...
+
+- 'ignore' -> 'lint.ignore'
+- 'select' -> 'lint.select'
+
+'per-file-ignores' -> 'lint.per-file-ignores' in [tool.ruff.lint.per-file-ignores]
+
 ## Linting & Styling
+
+- Run ruff:
+
+```bash
+uv run ruff format
+```
+
+- Run pre-commit hooks:
+
+```bash
+make check
+```
+
+## Testing
 
 ```bash
  make test
@@ -77,9 +101,22 @@ uv lock
 
 ## Update Github Action uv version
 
+# see https://github.com/astral-sh/setup-uv
+
+```yaml
+- name: Install uv
+  uses: astral-sh/setup-uv@v3 -- init is uv@v2
+  with:
+    version: ${{ inputs.uv-version }}
+    enable-cache: "true"
+    cache-suffix: ${{ matrix.python-version }}
+```
+
 ## Documentation from MKDocs
 
-- change the content in `./docs/index.md` or oder files
+- navigate to Settings > Actions > General in your repository, and under Workflow permissions select Read and write permissions
+
+- change the content in `./docs/index.md` or other files
 
 - update `mkdocs.yml`
 
@@ -87,7 +124,9 @@ uv lock
 make docs
 ```
 
-after the changes are pushed to GitHub: create a new release or pre-release to trigger the `pages build and deployment` workflow.
+- after the changes are pushed to GitHub: create a new release or pre-release to trigger the `pages build and deployment` workflow.
+
+- Settings > Code and Automation > Pages shows the documentatio URL
 
 To finalize the set-up for publishing to PyPI, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/publishing/#set-up-for-pypi).
 For activating the automatic documentation with MkDocs, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/mkdocs/#enabling-the-documentation-on-github).
