@@ -3,12 +3,6 @@
 [![Release](https://img.shields.io/github/v/release/deadhand777/test-uv)](https://img.shields.io/github/v/release/deadhand777/test-uv)
 ![Build status](https://img.shields.io/github/actions/workflow/status/deadhand777/test-uv/main.yml?branch=main)
 
-<center>
-
-![](../man/setup.jpeg)
-
-</center>
-
 ### 1. Create a New Repository
 
 First, create a repository on GitHub with the same name as this project, and then run the following commands:
