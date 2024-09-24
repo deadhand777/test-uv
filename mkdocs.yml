@@ -10,6 +10,7 @@ copyright: Maintained by <a href="https://deadhand777.com">Chris</a>.
 nav:
   - Home: index.md
   - Modules: modules.md
+  - Setup: setup.md
 plugins:
   - search
   - mkdocstrings:
