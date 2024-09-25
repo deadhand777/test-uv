@@ -35,8 +35,11 @@ dev-dependencies = [
 requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools]
+py-modules = []
+
 [tool.mypy]
-files = ["test_uv", "cdk"]
+files = ["test_uv"]
 disallow_untyped_defs = "True"
 disallow_any_unimported = "True"
 no_implicit_optional = "True"
