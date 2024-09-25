@@ -66,13 +66,23 @@ uv lock
 
 ## Update project.toml
 
-[tool.ruff]
-...
+- add the following to `project.toml` if additional folders are present in the root directory:
 
-- 'ignore' -> 'lint.ignore'
-- 'select' -> 'lint.select'
+```toml
+[tool.setuptools]
+py-modules = ["test_uv", "cdk", "additional_modules"]
+```
+
+- modify the following to `project.toml` to avoid deprecation warnings:
+
+```toml
+[tool.ruff]
+
+'ignore' -> 'lint.ignore'
+'select' -> 'lint.select'
 
 'per-file-ignores' -> 'lint.per-file-ignores' in [tool.ruff.lint.per-file-ignores]
+```
 
 ## Linting & Styling
 
@@ -128,6 +138,15 @@ make docs
 ## Code Coverage
 
 - To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/codecov/).
+
+- Extend action.yml:
+
+```yaml
+- name: Upload results to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+```
 
 ## Releasing a new version
 
