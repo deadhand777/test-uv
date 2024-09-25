@@ -5,7 +5,7 @@
 [![Commit activity](https://img.shields.io/github/commit-activity/m/deadhand777/test-uv)](https://img.shields.io/github/commit-activity/m/deadhand777/test-uv)
 [![License](https://img.shields.io/github/license/deadhand777/test-uv)](https://img.shields.io/github/license/deadhand777/test-uv)
 
-> This is a test of a new project templete for ai show cases.
+> This is a test of the new project templete for ai show cases.
 
 - **Github repository**: <https://github.com/deadhand777/test-uv/>
 - **Documentation** <https://deadhand777.github.io/test-uv/>
