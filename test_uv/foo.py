@@ -1,6 +1,12 @@
-import awswrangler as wr
+import feature_engine
+import imblearn
+import sagemaker
+import sklearn
 
-print(f"awswrangler version: {wr.__version__}")
+print(f"scikit-learn version: {sklearn.__version__}")
+print(f"feature_engine version: {feature_engine.__version__}")
+print(f"imblearn version: {imblearn.__version__}")
+print(f"sagemaker version: {sagemaker.__version__}")
 
 
 def foo(bar: str) -> str:

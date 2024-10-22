@@ -1,8 +1,5 @@
 ## Getting started with your project
 
-[![Release](https://img.shields.io/github/v/release/deadhand777/test-uv)](https://img.shields.io/github/v/release/deadhand777/test-uv)
-![Build status](https://img.shields.io/github/actions/workflow/status/deadhand777/test-uv/main.yml?branch=main)
-
 ![](./man/setup.jpeg)
 
 ### 1. Create a New Repository with this template
