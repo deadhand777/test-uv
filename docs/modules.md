@@ -1,7 +1,7 @@
-# Utility modules
+## Utility modules
 
 ::: src.utils
 
-# Training module
+## Training module
 
 ::: src.train

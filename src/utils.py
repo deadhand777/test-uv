@@ -14,11 +14,11 @@ def check_s3_path(s3_path: str) -> None:
     Checks that the given string is a valid S3 path.
 
     Args:
-        - s3_path (str): The S3 path to check.
+        s3_path (str): The S3 path to check.
 
     Raises:
-        - TypeError: If s3_path is not a string.
-        - ValueError: If s3_path does not start with 's3://'.
+        TypeError: If s3_path is not a string.
+        ValueError: If s3_path does not start with 's3://'.
     """
     if not isinstance(s3_path, str):
         raise TypeError("model_path must be a string")
@@ -32,10 +32,10 @@ def check_string_type(string: str) -> None:
     Checks that the given argument is a string.
 
     Args:
-        - string (str): The string to check.
+        string (str): The string to check.
 
     Raises:
-        - TypeError: If string is not a string.
+        TypeError: If string is not a string.
     """
     if not isinstance(string, str):
         raise TypeError("local_model_path must be a string")
@@ -56,8 +56,8 @@ def pd_read_s3_parquet(
         pandas.DataFrame: The Parquet data as a Pandas DataFrame.
 
     Examples:
-    >>> s3_path: str = "s3://sagemaker-eu-central-1-763678331342/scikit-learn/demo/data/data.parquet"
-    >>> df: pd.DataFrame = pd_read_s3_parquet(s3_data_path=s3_path)
+        >>> s3_path: str = "s3://sagemaker-eu-central-1-763678331342/scikit-learn/demo/data/data.parquet"
+        >>> df: pd.DataFrame = pd_read_s3_parquet(s3_data_path=s3_path)
     """
 
     # Run checks
@@ -79,17 +79,17 @@ def upload_data(local_data_path: str, s3_data_path: str, verbose: bool = True) -
     Uploads a local data file to an S3 bucket.
 
     Args:
-        - local_data_path (str): The path to the local data file.
-        - s3_data_path (str): The path in the S3 bucket to which the data file should be uploaded.
-        - verbose (bool): If True, print the S3 path to which the data was uploaded.
+        local_data_path (str): The path to the local data file.
+        s3_data_path (str): The path in the S3 bucket to which the data file should be uploaded.
+        verbose (bool): If True, print the S3 path to which the data was uploaded.
 
     Returns:
         None
 
     Examples:
-    >>> local_path: str = "data/data.parquet"
-    >>> s3_path: str = "s3://sagemaker-eu-central-1-763678331342/scikit-learn/demo/data"
-    >>> upload_data(local_data_path = local_path, s3_data_path = s3_path)
+        >>> local_path: str = "data/data.parquet"
+        >>> s3_path: str = "s3://sagemaker-eu-central-1-763678331342/scikit-learn/demo/data"
+        >>> upload_data(local_data_path = local_path, s3_data_path = s3_path)
     """
 
     # Run checks
@@ -110,17 +110,17 @@ def upload_model(local_model_path: str, s3_model_path: str, verbose: bool = True
     Uploads a local model file to an S3 bucket.
 
     Args:
-    - local_model_path (str): The path to the local model file.
-    - s3_model_path (str): The path to the S3 bucket where the model should be uploaded.
-    - verbose (bool): If True, print the S3 path to which the data was uploaded.
+        local_model_path (str): The path to the local model file.
+        s3_model_path (str): The path to the S3 bucket where the model should be uploaded.
+        verbose (bool): If True, print the S3 path to which the data was uploaded.
 
     Returns:
-    - None
+        None
 
     Examples:
-    >>> local_path: str = "./script_mode/models/model.tar.gz"
-    >>> s3_path: str = "s3://sagemaker-eu-central-1-763678331342/scikit-learn/demo/models"
-    >>> upload_model(local_model_path=local_path, s3_model_path=s3_path)
+        >>> local_path: str = "./script_mode/models/model.tar.gz"
+        >>> s3_path: str = "s3://sagemaker-eu-central-1-763678331342/scikit-learn/demo/models"
+        >>> upload_model(local_model_path=local_path, s3_model_path=s3_path)
     """
 
     # Run checks
@@ -141,16 +141,15 @@ def compress_joblib_model(model_path: str, output_path: str | None = None, verbo
     Compresses a scikit-learn model saved as a .joblib file into a .tar.gz archive.
 
     Args:
-    - model_path (str): The path to the saved .joblib file.
-    - output_path (str | None, optional): The path for the output .tar.gz file. If not provided,
-                                   it will use the same directory as the model file.
-    - verbose (bool): If True, print the S3 path to which the data was uploaded.
+        model_path (str): The path to the saved .joblib file.
+        output_path (str | None, optional): The path for the output .tar.gz file. If not provided, it will use the same directory as the model file.
+        verbose (bool): If True, print the S3 path to which the data was uploaded.
 
     Returns:
-    - str: The path to the compressed .tar.gz file.
+        str: The path to the compressed .tar.gz file.
 
     Examples:
-    >>> compress_joblib_model(model_path="model.joblib")
+        >>> compress_joblib_model(model_path="model.joblib")
     """
 
     # Run checks
@@ -178,14 +177,14 @@ def delete_s3_prefix(s3_data_path: str) -> None:
     Deletes all objects in the specified S3 bucket with the given key prefix.
 
     Args:
-        - s3_data_path (str): The path to the S3 bucket and key prefix.
+        s3_data_path (str): The path to the S3 bucket and key prefix.
 
     Returns:
         None
 
     Examples:
-    >>> s3_path: str = "s3://sagemaker-eu-central-1-763678331342/foo"
-    >>> delete_s3_prefix(s3_data_path=s3_path)
+        >>> s3_path: str = "s3://sagemaker-eu-central-1-763678331342/foo"
+        >>> delete_s3_prefix(s3_data_path=s3_path)
     """
 
     # Run checks
@@ -205,16 +204,14 @@ def delete_s3_objects(
     Deletes all objects in the specified S3 bucket with the given key prefix.
 
     Args:
-        - s3_data_path (str): The path to the S3 bucket and key prefix.
-        - region_name (str): The AWS region where the S3 bucket is located. Defaults to "eu-central-1".
-        - aws_profile_name (str): The name of the AWS profile to use. Defaults to "763678331342_ProgrammaticAccessUser".
+        s3_data_path (str): The path to the S3 bucket and key prefix.
 
     Returns:
         None
 
     Examples:
-    >>> s3_data_path = "s3://sagemaker-eu-central-1-763678331342/foo"
-    >>> delete_s3_objects(s3_data_path=s3_data_path)
+        >>> s3_data_path = "s3://sagemaker-eu-central-1-763678331342/foo"
+        >>> delete_s3_objects(s3_data_path=s3_data_path)
     """
 
     # Run checks

@@ -23,17 +23,12 @@ def load_data(data_path: str) -> tuple[pd.DataFrame, pd.Series]:
     """
     Loads data from a given path and splits it into X and y.
 
-    Parameters
-    ----------
-    data_path : str
-        The path to the data file.
+    Args:
+        data_path (str): The path to the data file.
 
-    Returns
-    -------
-    X : pd.DataFrame
-        The features.
-    y : pd.Series
-        The target.
+    Returns:
+        X (pd.DataFrame): The features.
+        y (pd.Series): The target.
     """
     if not isinstance(data_path, str):
         raise TypeError("local_model_path must be a string")
