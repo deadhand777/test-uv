@@ -1,1 +1,7 @@
-::: test_uv.foo
+# Utility modules
+
+::: src.utils
+
+# Training module
+
+::: src.train

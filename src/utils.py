@@ -233,3 +233,7 @@ def delete_s3_objects(
         logger.info(f"Deleted objects in bucket: {bucket}/{key_prefix}")
     else:
         logger.info(f"No objects in bucket: {bucket}/{key_prefix}")
+
+
+if __name__ == "__main__":  # pragma: no cover
+    pass
