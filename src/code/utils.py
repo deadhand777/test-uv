@@ -9,7 +9,7 @@ import sagemaker
 from loguru import logger
 
 
-def check_s3_path(s3_path: str) -> None:
+def check_s3_path(s3_path: str | None) -> None:
     """
     Checks that the given string is a valid S3 path.
 
@@ -27,7 +27,7 @@ def check_s3_path(s3_path: str) -> None:
         raise ValueError(f"{s3_path} must start with 's3://'")
 
 
-def check_string_type(string: str) -> None:
+def check_string_type(string: str | None) -> None:
     """
     Checks that the given argument is a string.
 
@@ -38,7 +38,21 @@ def check_string_type(string: str) -> None:
         TypeError: If string is not a string.
     """
     if not isinstance(string, str):
-        raise TypeError("local_model_path must be a string")
+        raise TypeError(f"Parameter {string} must be a string")
+
+
+def check_bool_type(boolean: bool) -> None:
+    """
+    Checks that the given argument is a boolean.
+
+    Args:
+        boolean (bool): The boolean to check.
+
+    Raises:
+        TypeError: If boolean is not a boolean.
+    """
+    if not isinstance(boolean, bool):
+        raise TypeError("script_mode must be a boolean")
 
 
 def pd_read_s3_parquet(

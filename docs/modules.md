@@ -1,7 +1,19 @@
-## Utility modules
+## **Utility modules**
 
-::: src.utils
+This section includes **common** utility functions and classes.
 
-## Training module
+::: src.code.utils
 
-::: src.train
+## **Training module**
+
+This module includes functions and classes used for model **training** and **inference**.
+
+::: src.code.train
+
+## **Deployment module**
+
+This module includes functions and classes used for model **deployment**.
+
+<!--
+::: src.script.deploy
+-->
