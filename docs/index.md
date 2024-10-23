@@ -55,37 +55,85 @@ git push origin main
 You are now ready to start development on your project!
 The CI/CD pipeline will be triggered when you open a pull request, merge to main, or when you create a new release.
 
-To finalize the set-up for publishing to PyPI, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/publishing/#set-up-for-pypi).
-For activating the automatic documentation with MkDocs, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/mkdocs/#enabling-the-documentation-on-github).
-To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/codecov/).
-
-## Releasing a new version
-
----
-
-Repository initiated with [fpgmaas/cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv).
-
-## UV
+## Set Up Your Development Environment
 
 ```bash
-uv venv --python 3.11.6
+uv venv --python <python-version> # e.g. 3.11.6
 source .venv/bin/activate
 which python
- python -V
+python -V
+```
+
+```bash
 uv sync
- uv pip list
+uv pip list
 uv add <package>
 uv lock
 ```
 
+## Update project.toml
+
+[tool.ruff]
+...
+
+- 'ignore' -> 'lint.ignore'
+- 'select' -> 'lint.select'
+
+'per-file-ignores' -> 'lint.per-file-ignores' in [tool.ruff.lint.per-file-ignores]
+
 ## Linting & Styling
 
+- Run ruff:
+
 ```bash
- test-section
+uv run ruff format
+```
+
+- Run pre-commit hooks:
+
+```bash
+make check
+```
+
+## Testing
+
+```bash
+ make test
+```
+
+## Update Github Action uv version
+
+- see [setup-uv](https://github.com/astral-sh/setup-uv)
+
+```yaml
+- name: Install uv
+  uses: astral-sh/setup-uv@v3 -- init is uv@v2
+  with:
+    version: ${{ inputs.uv-version }}
+    enable-cache: "true"
+    cache-suffix: ${{ matrix.python-version }}
 ```
 
 ## Documentation from MKDocs
 
+- navigate to Settings > Actions > General in your repository, and under Workflow permissions select Read and write permissions
+
+- change the content in `./docs/index.md` or other files
+
+- update `mkdocs.yml`
+
 ```bash
 make docs
 ```
+
+- after the changes are pushed to GitHub: create a new release or pre-release to trigger the `pages build and deployment` workflow.
+
+- Settings > Code and Automation > Pages shows the documentatio URL
+
+To finalize the set-up for publishing to PyPI, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/publishing/#set-up-for-pypi).
+For activating the automatic documentation with MkDocs, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/mkdocs/#enabling-the-documentation-on-github).
+To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/codecov/).
+
+## Resources
+
+Repository initiated with [fpgmaas/cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv).
