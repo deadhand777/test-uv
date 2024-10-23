@@ -48,16 +48,15 @@ def deploy_sklearn_model(
     Returns:
         tuple: A tuple containing the model, predictor, model description, and endpoint description.
 
-    Example:
+    Examples:
+        >>> MODEL_PREFIX: str = "scikit-learn-script-mode-inference"
+        >>> role: str = "arn:aws:iam::763678331342:role/temp_sagemaker_role"
+        >>> MODEL_DATA: str = "s3://sagemaker-eu-central-1-763678331342/demo"
         >>> model, predictor, model_desc, endpoint_desc = deploy_sklearn_model(
-                name=MODEL_PREFIX,
-                # training_input_path=training_input_path,
-                model_data=model_data,
-                role=role,
-                image_uri=image_uri,
-                script_mode=False,
-                # hyperparameters=dict(n_estimators=20),
-            )
+        >>>     name=MODEL_PREFIX,
+        >>>     model_data=model_data,
+        >>>     role=role
+        >>> )
     """
     # Set up logging
     logger.add(

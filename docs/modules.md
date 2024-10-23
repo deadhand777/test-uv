@@ -14,6 +14,4 @@ This module includes functions and classes used for model **training** and **inf
 
 This module includes functions and classes used for model **deployment**.
 
-<!--
 ::: src.script.deploy
--->
