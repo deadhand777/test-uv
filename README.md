@@ -39,6 +39,8 @@ git checkout -b <new-branch-name>
 git push -u origin <branch-name>
 ```
 
+For more details, see the [Getting Started](./CONTRIBUTING.md) guide.
+
 ## Setup Guide
 
 - [Setup Guide](./docs/setup.md)
