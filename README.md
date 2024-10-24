@@ -6,10 +6,38 @@
 [![Commit activity](https://img.shields.io/github/commit-activity/m/deadhand777/test-uv)](https://img.shields.io/github/commit-activity/m/deadhand777/test-uv)
 [![License](https://img.shields.io/github/license/deadhand777/test-uv)](https://img.shields.io/github/license/deadhand777/test-uv)
 
-This is a test of a new project templete for machine learning applications
+This is a test of a new project templete for machine learning applications.
 
 - **Github repository**: <https://github.com/deadhand777/test-uv/>
 - **Documentation** <https://deadhand777.github.io/test-uv/>
+
+<p align="center">
+  <img width="460" height="300" src="./docs/man/ai.jpeg">
+</p>
+
+## Quick Start
+
+Clone the repository:
+
+```bash
+git clone https://github.com/deadhand777/test-uv.git
+```
+
+Install the required dependencies:
+
+```bash
+uv sync
+```
+
+Create a new remote branch:
+
+```bash
+git branch <new-branch-name>
+
+git checkout -b <new-branch-name>
+
+git push -u origin <branch-name>
+```
 
 ## Setup Guide
 
